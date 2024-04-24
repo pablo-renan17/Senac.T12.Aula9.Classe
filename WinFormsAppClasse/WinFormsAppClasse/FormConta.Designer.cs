@@ -30,6 +30,8 @@
         {
             btnNovaConta = new Button();
             groupBox1 = new GroupBox();
+            txtValor = new TextBox();
+            label1 = new Label();
             txtTitularConta = new TextBox();
             label2 = new Label();
             txtNumeroConta = new TextBox();
@@ -42,7 +44,7 @@
             // 
             // btnNovaConta
             // 
-            btnNovaConta.Location = new Point(12, 132);
+            btnNovaConta.Location = new Point(12, 208);
             btnNovaConta.Name = "btnNovaConta";
             btnNovaConta.Size = new Size(119, 45);
             btnNovaConta.TabIndex = 0;
@@ -52,16 +54,35 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtValor);
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtTitularConta);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtNumeroConta);
             groupBox1.Controls.Add(num);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(450, 105);
+            groupBox1.Size = new Size(399, 173);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Conta";
+            // 
+            // txtValor
+            // 
+            txtValor.Location = new Point(19, 119);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(100, 23);
+            txtValor.TabIndex = 6;
+            txtValor.Validated += txtValor_Validated;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 91);
+            label1.Name = "label1";
+            label1.Size = new Size(80, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Digite o valor:";
             // 
             // txtTitularConta
             // 
@@ -99,14 +120,14 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 194);
+            listBox1.Location = new Point(12, 277);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(399, 94);
+            listBox1.Size = new Size(399, 109);
             listBox1.TabIndex = 2;
             // 
             // btnDepositar
             // 
-            btnDepositar.Location = new Point(148, 132);
+            btnDepositar.Location = new Point(148, 208);
             btnDepositar.Name = "btnDepositar";
             btnDepositar.Size = new Size(119, 45);
             btnDepositar.TabIndex = 3;
@@ -116,7 +137,7 @@
             // 
             // btnSacar
             // 
-            btnSacar.Location = new Point(283, 132);
+            btnSacar.Location = new Point(282, 208);
             btnSacar.Name = "btnSacar";
             btnSacar.Size = new Size(119, 45);
             btnSacar.TabIndex = 4;
@@ -128,7 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(427, 302);
+            ClientSize = new Size(427, 393);
             Controls.Add(btnSacar);
             Controls.Add(btnDepositar);
             Controls.Add(listBox1);
@@ -152,5 +173,7 @@
         private ListBox listBox1;
         private Button btnDepositar;
         private Button btnSacar;
+        private TextBox txtValor;
+        private Label label1;
     }
 }

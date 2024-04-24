@@ -3,6 +3,8 @@
 namespace WinFormsAppClasse
 {
     //isso aqui embaixo é uma classe(visibilidade(public), tipo(class), nome(Conta))
+
+
     public class Conta
     {
         //propriedades(visibilidade, tipo, nome)
